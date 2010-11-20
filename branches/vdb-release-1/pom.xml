@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.visualdependencies</groupId>
+	<artifactId>vdb-complete</artifactId>
+	<version>1.3.0-SNAPSHOT</version>
+	<name>visualDependencies</name>
+	<description>visualize dependencies of your database</description>
+
+	<properties>
+		<sourceEnconding>UTF-8</sourceEnconding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<developers>
+		<developer>
+			<id>knallisworld</id>
+			<name>Jan Philipp</name>
+			<email>knallisworld@googlemail.com</email>
+		</developer>
+		<developer>
+			<id>ak1709</id>
+			<name>Andre Kasper</name>
+			<email>ak1709@googlemail.com</email>
+		</developer>
+	</developers>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate</artifactId>
+			<version>3.2.7.ga</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>jta</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.kenai.swingjavabuilderext</groupId>
+			<artifactId>swingjavabuilder</artifactId>
+			<version>0.3</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.collections</groupId>
+			<artifactId>collections-generic</artifactId>
+			<version>4.01</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.4.0.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung2</artifactId>
+			<version>2.0.1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-graph-impl</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-visualization</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-io</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.explodingpixels</groupId>
+			<artifactId>macwidgets</artifactId>
+			<version>0.9.6-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf</groupId>
+			<artifactId>sqljep</artifactId>
+			<version>0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.4.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>1.8.0.10</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.3.0.GA</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.13</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<!-- used for mac widgets -->
+			<id>javastream</id>
+			<name>Javastream Maven Repo</name>
+			<url>http://maven.javastream.de/</url>
+		</repository>
+		<repository>
+			<!-- used for sqljep -->
+			<id>gvsig</id>
+			<name>gbvig Repo</name>
+			<url>http://gvsig-desktop.forge.osor.eu/downloads/pub/projects/gvSIG-desktop/maven-repository</url>
+		</repository>
+	</repositories>
+</project>
