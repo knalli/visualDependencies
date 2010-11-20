@@ -1,0 +1,46 @@
+JPanel(name=panel):
+    content:
+     - JLabel(name=lblName, text=application.connection.trigger.name)
+     - JLabel(name=lblEvents, text=application.connection.trigger.events)
+     - JLabel(name=lblMode, text=application.connection.trigger.mode)
+     - JLabel(name=lblInsteadOfRow, text=application.connection.trigger.insteadofrow)
+     - JLabel(name=lblTable, text=application.connection.trigger.table)
+     - JLabel(name=lblWhenClause, text=application.connection.trigger.whenclause)
+     - JLabel(name=lblBody, text=application.connection.trigger.body)
+     - JLabel(name=lblUsedTables, text=application.connection.trigger.usedtables)
+     - JLabel(name=lblAffectedTables, text=application.connection.trigger.affectedtables)
+     - JLabel(name=lblActionType, text=application.connection.trigger.actiontype)
+     - JLabel(name=lblType, text=application.connection.trigger.type)
+     - JTextField(name=ctnName)
+     - JTextField(name=ctnActionType)
+     - JTextField(name=ctnType)
+     - JCheckBox(name=ctnEnabled, text=Enabled)
+     - JCheckBox(name=ctnEventInsert, text=Insert)
+     - JCheckBox(name=ctnEventUpdate, text=Update)
+     - JCheckBox(name=ctnEventDelete, text=Delete)
+     - JCheckBox(name=ctnModeBeforeStatement,text=Before Statement)
+     - JCheckBox(name=ctnModeBeforeRow,text=Before Row)
+     - JCheckBox(name=ctnModeAfterStatement,text=After Statement)
+     - JCheckBox(name=ctnModeAfterRow,text=After Row)
+     - JCheckBox(name=ctnInsteadOfRow, text=Instead Of)
+     - JTextField(name=ctnTable)
+     - JTextField(name=ctnColumn)
+     - JTextField(name=ctnWhenClause)
+     - JScrollPane(name=ctnBodyScrolled,verticalScrollBarPolicy=always, horizontalScrollBarPolicy=always):
+       JTextArea(name=ctnBody)
+     - JLabel(name=ctnUsedTables)
+     - JLabel(name=ctnAffectedTables)
+     - MigLayout: |
+        [pref]                [grow]
+        >lblName              ctnName
+                              <ctnEnabled
+        >lblActionType        ctnActionType
+        >lblType              ctnType
+        >lblEvents            ctnEventInsert,ctnEventUpdate,ctnEventDelete
+        >lblMode              ctnModeBeforeStatement,ctnModeBeforeRow,ctnModeAfterStatement,ctnModeAfterRow
+        >lblInsteadOfRow      ctnInsteadOfRow
+        >lblTable             ctnTable ctnColumn
+        >lblWhenClause        ctnWhenClause
+        >lblBody              ctnBodyScrolled+*
+        >lblUsedTables        ctnUsedTables+*
+        >lblAffectedTables    ctnAffectedTables+*

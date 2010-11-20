@@ -1,0 +1,8 @@
+JPanel(name=panel):
+    content:
+     - JLabel(name=lblBody, text=application.connection.view.definition)
+     - JScrollPane(name=ctnBodyScrolled,verticalScrollBarPolicy=always, horizontalScrollBarPolicy=always):
+       JTextArea(name=ctnBody)
+     - MigLayout: |
+        [pref]                [grow]
+        >lblBody              ctnBodyScrolled+*
