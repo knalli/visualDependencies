@@ -1,0 +1,26 @@
+#labels Featured,Phase-Deploy
+This page provides some notes how to download and build the project.
+
+= Introduction =
+
+All subprojects of _visualDependencies_ use the Java 6 SDK. The build management is done with Maven 2. The projects are built-with Eclipse ones, so Eclipse users will have no problems importing the project as a standard Java/Maven project.
+
+
+= Details for Eclipse (recommended) =
+
+Note: You have to install the [m2eclipse.sonatype.org/ m2eclipse] Plugin. This is the de-facto standard Maven-Plugin for Eclipse. This will provide a built-in Maven, too.
+
+In Eclipse 3.6 (current release), import a new projekt using Eclipse's Import from SVN feature. For SVN information, see the tab [http://code.google.com/p/visualdependencies/source/list Source] at the top. 
+
+That's it. Build a new jar artifact or just start the Main.java.
+
+= Details for command line/no Build-Management-IDE =
+
+Note: You have to install Maven2 and make it available in your path environment. Unfortunately, we cannot provide a full Maven install guide. 
+
+Just checkout the code from the SVN. For SVN information, see the tab [http://code.google.com/p/visualdependencies/source/list Source] at the top. 
+
+That's it. Build a new jar artifact via mvn package and start the jar.
+
+= One-Jar =
+Currently, the build process does not provide a onejar artifact. This will come later.
