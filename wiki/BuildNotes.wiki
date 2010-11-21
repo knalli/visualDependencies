@@ -8,7 +8,7 @@ All subprojects of _visualDependencies_ use the Java 6 SDK. The build management
 
 = Details for Eclipse (recommended) =
 
-Note: You have to install the [m2eclipse.sonatype.org/ m2eclipse] Plugin. This is the de-facto standard Maven-Plugin for Eclipse. This will provide a built-in Maven, too.
+Note: You have to install the [http://m2eclipse.sonatype.org/ m2eclipse] Plugin. This is the de-facto standard Maven-Plugin for Eclipse. This will provide a built-in Maven, too.
 
 In Eclipse 3.6 (current release), import a new projekt using Eclipse's Import from SVN feature. For SVN information, see the tab [http://code.google.com/p/visualdependencies/source/list Source] at the top. 
 
