@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="visualDependencies" default="help" basedir="../../../">
+	
+	<!-- The path of the actual artifact (project name), without the file suffix. -->
+	<property name="project.name" value="visualDependencies.one-jar" />
+	<!-- The path of the ojdbc driver, without the file suffix. -->
+	<property name="ojdbc.name" value="ojdbc14" />
+	
+	<!-- DO NOT CHANGE THIS LINES UNLESS YOU KNOW WHAT YOU DO! -->
+	<property name="project.jar" value="${project.name}.jar" />
+	<property name="ojdbc.jar" value="${ojdbc.name}.jar" />
+
+	<!-- Set actual paths of artifacts. -->
+	<property name="application.path" location="${basedir}/target/${project.jar}" />
+	<property name="ojdbc.parent.path" location="${basedir}/oracle" />
+	<property name="ojdbc.path" location="${ojdbc.parent.path}/lib/${ojdbc.jar}" />
+
+	<!-- Shows help (default target) -->
+	<target name="help">
+		<echo message="See http://code.google.com/p/visualdependencies/wiki/OracleJdbcDriver" />
+		<echo message="Usage: attachOJDBC" />
+	</target>
+
+	<!-- Checks if the artifacts are available. Throws exceptions if they not exist. -->
+	<target name="checkDependencies">
+		<available file="${application.path}" property="application.exists" />
+		<available file="${ojdbc.path}" property="ojdbc.exists" />
+
+		<fail unless="application.exists" message="The application file (${application.path}) does not exist." />
+		<fail unless="ojdbc.exists" message="The ojdbc file (${ojdbc.path}) does not exist." />
+	</target>
+
+	<!-- Integrates all files of ojdbc.parent.path into the target jar. -->
+	<target name="attachOJDBC" depends="checkDependencies">
+		<jar update="true" destfile="${application.path}">
+			<fileset dir="${ojdbc.parent.path}" />
+		</jar>
+	</target>
+
+</project>
