@@ -29,4 +29,4 @@ That's it. Build a new jar artifact via mvn package and start the jar.
 
 = Build =
 == One-Jar ==
-Currently, the build process does not provide a onejar artifact. This will come later.
+One-Jar artifacts are built-in now. In general, you find the appropriate jar near the normal jar. For example, for the normal artifact build.jar the one-jar's name is called build.one-jar.jar.
