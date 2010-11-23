@@ -7,9 +7,11 @@ Due license issues, we cannot provide a built-in driver support. Because of this
 You can download a suitable file at http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html -- for example the ojdbc14.jar.
 
 In order to build a jar file *with built-in oracle support*:
- # Make sure that the actual build was successful. The directory _target_ should contain at least the artifact project.jar (and project.one-jar.jar if the one-jar profile was active). 
+ # Make sure that the actual build was successful. The directory _target_ should contain at least two artifacts: project.jar and project.one-jar.jar 
  # Download a suitable ojdbc jar file and place it right into the target directory.
  # Perform the ant script at /src/main/scripts/build-with-ojdbc.xml. The default parameters require an ojdbc14.jar at /oracle/lib/ojdbc14.jar and the one-jar artifact.
+
+Note: Because you want a single, executable jar-file, the non-onejar-file is not usable.
 
 So, in short:
  # Download and save the ojdbc14 at /oracle/lib/ojdbc14.jar
