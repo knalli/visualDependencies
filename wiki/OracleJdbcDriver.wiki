@@ -1,0 +1,12 @@
+The Oracle JDBC driver is not part of the project nor the oracle plugin. 
+
+= Problem =
+Due license issues, we cannot provide a built-in driver support. Because of this, Oracle provides no official maven dependency support for this jar files.
+
+= Solution =
+You can download a suitable file at http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html -- for example the ojdbc14.jar.
+
+In order to build a jar file *with built-in oracle support*:
+ # Make sure that the actual build was successful. The directory _target_ should contain at least the artifact project.jar (and project.one-jar.jar if the one-jar profile was active). 
+ # Download a suitable ojdbc jar file and place it right into the target directory.
+ # Perform the 
