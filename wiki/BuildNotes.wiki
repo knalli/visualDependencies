@@ -1,20 +1,25 @@
 #labels Featured,Phase-Deploy
-This page provides some notes how to download and build the project.
+<wiki:toc max_depth="3" />
 
-= Introduction =
+= Requirements =
 
-All subprojects of _visualDependencies_ use the Java 6 SDK. The build management is done with Maven 2. The projects are built-with Eclipse ones, so Eclipse users will have no problems importing the project as a standard Java/Maven project.
+All sub projects of _visualDependencies_ use the Java 6 SDK. The build management is done with Maven 2. The projects are built-with Eclipse ones, so Eclipse users will have no problems importing the project as a standard Java/Maven project.
 
+Note: We cannot ship the required ojdbc.jar directly in our source code repository due license issues. See here: OracleJdbcDriver.
 
-= Details for Eclipse (recommended) =
+= Checkout =
+== Subversion URL ==
+The source code project (latest) is located at http://code.google.com/p/visualdependencies/source/browse/#svn/vdb-release-2009/trunk.
 
-Note: You have to install the [http://m2eclipse.sonatype.org/ m2eclipse] Plugin. This is the de-facto standard Maven-Plugin for Eclipse. This will provide a built-in Maven, too.
+== Details for Eclipse (recommended) ==
+
+Note: You have to install the [http://m2eclipse.sonatype.org/ m2eclipse] plugin. This is the de-facto standard Maven plugin for Eclipse. This will provide a built-in Maven, too.
 
 In Eclipse 3.6 (current release), import a new projekt using Eclipse's Import from SVN feature. For SVN information, see the tab [http://code.google.com/p/visualdependencies/source/list Source] at the top. 
 
 That's it. Build a new jar artifact or just start the Main.java.
 
-= Details for command line/no Build-Management-IDE =
+== Details for command line/no Build-Management-IDE ==
 
 Note: You have to install Maven2 and make it available in your path environment. Unfortunately, we cannot provide a full Maven install guide. 
 
@@ -22,5 +27,6 @@ Just checkout the code from the SVN. For SVN information, see the tab [http://co
 
 That's it. Build a new jar artifact via mvn package and start the jar.
 
-= One-Jar =
+= Build =
+== One-Jar ==
 Currently, the build process does not provide a onejar artifact. This will come later.
