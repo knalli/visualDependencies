@@ -14,7 +14,7 @@ In order to build a jar file *with built-in oracle support*:
 
 Note: Because you want a single, executable jar-file, the non-onejar-file is not usable.
 
-Note: The test cases will fail at the moment because they were worked against a real db which is not available any more.
+Note: The test cases will fail at the moment because they were crerated against a real db which is not available any more.
 
 So, in short:
  # Download and save the ojdbc14 at /oracle/lib/ojdbc14.jar
