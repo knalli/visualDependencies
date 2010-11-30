@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.visualdependencies</groupId>
+	<artifactId>vdb</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>visualDependencies</name>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>vdb-parent</module>
+		<module>vdb-core</module>
+		<module>vdb-common-utils</module>
+		<module>vdb-common-plugins</module>
+		<module>vdb-mysql-plugin</module>
+		<module>vdb-oracle-plugin</module>
+	</modules>
+</project>
